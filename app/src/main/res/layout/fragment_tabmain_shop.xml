@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_mall_title"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/color_mall"
+        android:gravity="center_horizontal"
+        android:paddingTop="33dp"
+        android:text="咖豆商城"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <com.andview.refreshview.XRefreshView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/xRefreshview"
+        >
+        <com.andview.refreshview.XScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/xscrollview">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_bg"
+                    android:paddingBottom="10dp">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:background="@mipmap/mall_header_bg_black" />
+                    <com.ecarxclub.app.utils.banner.view.ConvenientBanner
+                        android:id="@+id/cb_shop"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:canLoop="true"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rcv_shop_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_below="@+id/cb_shop">
+
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/ll_horizontal_p"
+                        android:layout_height="52dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_remen"/>
+                            <TextView
+                                style="@style/text_black16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="6dp"
+                                android:text="热门兑换" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_shop_more"
+                            style="@style/text_cb9f54_14"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|center_vertical"
+                            android:drawablePadding="4dp"
+                            android:drawableRight="@mipmap/icon_enter"
+                            android:text="更多" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:orientation="horizontal">
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="46dp"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/img_shop_tag1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                />
+                            <TextView
+                                android:id="@+id/tv_shop_tag1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="6dp"
+                                android:text="配件类"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="46dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/img_shop_tag2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                />
+                            <TextView
+                                android:id="@+id/tv_shop_tag2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="6dp"
+                                android:text="配件类"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="46dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/img_shop_tag3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                />
+                            <TextView
+                                android:id="@+id/tv_shop_tag3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="6dp"
+                                android:text="配件类"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="46dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/img_shop_tag4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                />
+                            <TextView
+                                android:id="@+id/tv_shop_tag4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="6dp"
+                                android:text="配件类"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <com.ecarxclub.app.views.RecyclerForScrollView
+                    android:id="@+id/rv_shop_list"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_height="match_parent">
+
+                </com.ecarxclub.app.views.RecyclerForScrollView>
+            </LinearLayout>
+        </com.andview.refreshview.XScrollView>
+    </com.andview.refreshview.XRefreshView>
+
+</LinearLayout>

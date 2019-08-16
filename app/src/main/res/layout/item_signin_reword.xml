@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_marginBottom="10dp">
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp">
+        <ImageView
+            android:id="@+id/item_img_signin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/item_tv_signin_day"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_alignParentBottom="true"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/lay_bgyellow_radius32"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/item_tv_signin_title"
+        style="@style/text_black"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="6dp"/>
+    <Button
+        android:id="@+id/item_btn_signin_get"
+        android:layout_width="40dp"
+        android:layout_height="16dp"
+        android:background="@drawable/lay_bgyellow_radius4"
+        android:textSize="10sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:text="领取"/>
+</LinearLayout>

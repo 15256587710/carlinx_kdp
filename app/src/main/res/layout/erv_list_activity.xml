@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@mipmap/pic_kdp_center"
+        android:gravity="center_horizontal">
+        <include
+            layout="@layout/toolbar_bases_n"
+            />
+        <TextView
+            android:id="@+id/tv_ir_score"
+            style="@style/text_white"
+            android:textSize="28sp"
+            android:text=""/>
+        <TextView
+            style="@style/text_white"
+            android:textColor="@color/colorTransparentW30"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24dp"
+            android:text="咖豆总额"/>
+    </LinearLayout>
+
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/xTabLayout_mine_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:layout_marginBottom="8dp"
+        app:xTabIndicatorColor="@color/color_tab_line"
+        app:xTabIndicatorHeight="2dp"
+        app:xTabIndicatorWidth="20dp"
+        app:xTabMode="fixed"
+        app:xTabSelectedTextColor="@color/tab_y"
+        app:xTabSelectedTextSize="16sp"
+        app:xTabTextColor="@color/tab_n"
+        app:xTabTextSize="14sp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_mine_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <!--<com.jude.easyrecyclerview.EasyRecyclerView-->
+        <!--android:id="@+id/easyrv_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_empty="@layout/content_erv_empty"-->
+        <!--app:layout_error="@layout/content_erv_error">-->
+
+    <!--</com.jude.easyrecyclerview.EasyRecyclerView>-->
+</LinearLayout>

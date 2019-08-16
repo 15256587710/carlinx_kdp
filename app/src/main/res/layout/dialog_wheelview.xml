@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        style="@style/ll_horizontal_p"
+        android:layout_height="45dp">
+        <TextView
+            android:id="@+id/dialog_wheel_cancel"
+            style="@style/text_gry14"
+            android:layout_weight="1"
+            android:text="取消"/>
+        <TextView
+            android:id="@+id/dialog_wheel_sure"
+            style="@style/text_black16"
+            android:text="确定"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+        <com.ecarxclub.app.utils.picker.widget.WheelView
+            android:id="@+id/dialog_wheel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+</LinearLayout>

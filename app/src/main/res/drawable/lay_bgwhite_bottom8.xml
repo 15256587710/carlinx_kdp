@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 填充 -->
+    <solid android:color="@color/white" />
+    <!-- 描边 -->
+    <!--<stroke
+        android:width="0.5dp"
+        android:color="@color/colore5" />-->
+    <corners
+        android:bottomLeftRadius="8dp"
+        android:bottomRightRadius="8dp"
+        ></corners>
+    <!--间隔-->
+    <!--<padding-->
+        <!--android:bottom="0.01dp"-->
+        <!--android:left="0dp"-->
+        <!--android:right="0dp"-->
+        <!--android:top="0.01dp" />-->
+    <!-- 渐变 gradient-->
+    <!-- 圆角 corners -->
+    <!-- 大小size -->
+
+</shape>  

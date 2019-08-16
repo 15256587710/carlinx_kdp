@@ -1,0 +1,295 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="wx_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">-->
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/colorTransparentB100</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--蒙层-->
+    <style name="PopupAnimaFade" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/basepopup_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/basepopup_fade_out</item>
+    </style>
+
+    <style name="AlertDialogActivityTheme" parent="Theme.AppCompat.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFrame">@null</item>
+        <!--//去掉标题-->
+        <item name="windowNoTitle">true</item>
+        <!--//背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--//设置触摸弹框外面是否会消失-->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+    <!-- 自定义仿IOS的SheetDialog的样式 -->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <!-- SheetDialog进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/sheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/sheet_dialog_out</item>
+    </style>
+
+    <style name="BottomAlertDialog" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 还可以加入一些弹出和退出的动画 (lan)-->
+    </style>
+
+    <style name="text_white">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="text_white16">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--1A1A1A-->
+    <style name="text_black">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/tab_y</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="text_black16">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/tab_y</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--b2b2b2-->
+    <style name="text_gry">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/tab_n</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="text_gry14">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/tab_n</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--666666-->
+    <style name="text_666_14">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color666</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!--cb9f54-->
+    <style name="text_cb9f54_14">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_cb9f54</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="text_cb9f54_12">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_cb9f54</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--EB1D1D-->
+    <style name="text_red16">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_red_eb1d</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--FF5900-->
+    <style name="text_ff5900">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_r_border</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_border">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_r_border</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:background">@drawable/lay_bgfff4ef_borderff5900_radius2</item>
+    </style>
+
+
+
+    <!--三级文字颜色-->
+    <style name="text_c1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_c1</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--圆角黄色按钮-->
+    <style name="btn_nomargin_yellow_rd50">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/lay_bgyellow_radius50</item>
+    </style>
+
+    <style name="btn_yellow_rd50">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:background">@drawable/lay_bgyellow_radius50</item>
+    </style>
+
+
+    <style name="btn_bg1d_rd4">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:background">@drawable/lay_bg1d_radius4</item>
+    </style>
+
+    <style name="btn_bgyellow_rd4">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:background">@drawable/lay_bgyellow_radius4</item>
+    </style>
+
+    <style name="btn_bgblue_rd4">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/lay_bgblue_radius4</item>
+    </style>
+
+    <!--edittext 背景白色-->
+    <style name="et_hintc1_bgwhite">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/tab_y</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColorHint">@color/color_c1</item>
+    </style>
+
+
+    <style name="ll_horizontal_p">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/lay_bottom_border</item>
+    </style>
+
+    <style name="checkbox_address">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@drawable/check_box_txt</item>
+        <item name="android:drawableLeft">@drawable/check_box_address</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="checkbox_apply">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:textColor">@drawable/check_box_txt</item>-->
+        <item name="android:drawableLeft">@drawable/check_box_apply</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:button">@null</item>
+        <!--<item name="android:drawablePadding">10dp</item>-->
+    </style>
+
+    <style name="checkbox_login">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:textColor">@drawable/check_box_txt</item>-->
+        <item name="android:drawableLeft">@drawable/check_box_login</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:button">@null</item>
+        <!--<item name="android:drawablePadding">10dp</item>-->
+    </style>
+
+</resources>

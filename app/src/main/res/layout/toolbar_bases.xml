@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/white"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lay_bottom_border">
+        <ImageView
+            android:id="@+id/tv_toolbar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/nav_icon_back"/>
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/tab_y"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_toolbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:text=""
+            android:textColor="@color/tab_y"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_toolbar_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/shape_mine_news"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar_bases"
+        />
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/erv_mine_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_empty="@layout/content_erv_empty"
+        app:layout_error="@layout/content_erv_error"
+        android:layout_marginTop="10dp">
+
+    </com.jude.easyrecyclerview.EasyRecyclerView>
+</LinearLayout>

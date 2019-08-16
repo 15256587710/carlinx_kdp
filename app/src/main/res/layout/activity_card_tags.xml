@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        layout="@layout/toolbar_bases"
+        />
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/xTabLayout_mine_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        app:xTabIndicatorColor="@color/color_tab_line"
+        app:xTabIndicatorHeight="2dp"
+        app:xTabIndicatorWidth="20dp"
+        app:xTabMode="scrollable"
+        app:xTabSelectedTextColor="@color/tab_y"
+        app:xTabSelectedTextSize="16sp"
+        app:xTabTextColor="@color/tab_n"
+        app:xTabTextSize="14sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/color_bg"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_mine_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

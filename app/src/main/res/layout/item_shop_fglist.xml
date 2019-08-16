@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:layout_marginBottom="8dp"
+    android:paddingRight="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <ImageView
+            android:id="@+id/item_img_shoplist"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:gravity="center"
+            android:background="@drawable/lay_bgred_radius2"
+            android:layout_width="32dp"
+            android:layout_height="16dp"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:text="折扣"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_tv_shoplist_title"
+        style="@style/text_black"
+        android:textSize="14sp"
+        android:text=""
+        android:maxLines="2"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="8dp"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/item_tv_shoplist_score"
+        style="@style/text_red16"
+        android:textSize="13sp"
+        android:text="11111"
+        android:layout_marginLeft="8dp"
+        android:lines="1"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"/>
+</LinearLayout>

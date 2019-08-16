@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<!-- 填充 -->
+	<solid android:color="@color/white" />
+	<!-- 描边 -->
+	<corners android:radius="2dp"></corners>
+	<stroke android:width="0.5dp" android:color="@color/colorBottomLine"/>
+	<!--间隔-->
+	<!--<padding-->
+	<!--android:bottom="1dp"-->
+	<!--android:left="5dp"-->
+	<!--android:right="5dp"-->
+	<!--android:top="1dp" />-->
+	<!-- 渐变 gradient-->
+	<!-- 圆角 corners -->
+	<!-- 大小size -->
+
+</shape>

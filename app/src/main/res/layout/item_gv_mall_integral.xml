@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/tab_n"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/item_tv_mall_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/colorTransparentW50"
+        android:text="积分+1"/>
+    <TextView
+        android:id="@+id/item_tv_mall_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textColor="@color/colorTransparentW50"
+        android:text="22"/>
+</LinearLayout>

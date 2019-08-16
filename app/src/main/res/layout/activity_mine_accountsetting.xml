@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+    <include
+        layout="@layout/toolbar_bases"
+        />
+
+    <LinearLayout
+        style="@style/ll_horizontal_p"
+        android:layout_marginTop="10dp"
+        android:layout_height="45dp">
+        <TextView
+            style="@style/text_black16"
+            android:layout_weight="1"
+            android:text="清理缓存"/>
+        <TextView
+            android:id="@+id/tv_set_cache"
+            style="@style/text_c1"
+            android:textSize="15sp"
+            android:text=""/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:src="@mipmap/nav_icon_right"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ll_horizontal_p"
+        android:layout_height="45dp">
+        <TextView
+            style="@style/text_black16"
+            android:layout_weight="1"
+            android:text="当前版本"/>
+        <TextView
+            android:id="@+id/tv_set_packageVersion"
+            style="@style/text_c1"
+            android:textSize="15sp"
+            android:text=""/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_mine_aset_logout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="退出登录"
+        android:textSize="16sp"
+        android:textColor="@color/color_red_eb1d"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@color/white"/>
+</LinearLayout>

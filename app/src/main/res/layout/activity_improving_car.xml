@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_bases" />
+
+    <LinearLayout
+        android:id="@+id/ll_impcar_choosecar"
+        style="@style/ll_horizontal_p"
+        android:layout_height="55dp">
+
+        <TextView
+            style="@style/text_black16"
+            android:layout_weight="1"
+            android:text="车型：" />
+
+        <TextView
+            android:id="@+id/tv_impcar_car"
+            style="@style/text_c1"
+            android:textSize="16sp"
+            android:text="未选择" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:src="@mipmap/nav_icon_right"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_impcar_color"
+        style="@style/ll_horizontal_p"
+        android:layout_height="55dp">
+        <TextView
+            style="@style/text_black16"
+            android:layout_weight="1"
+            android:text="颜色：" />
+        <TextView
+            android:id="@+id/tv_impcar_color"
+            style="@style/text_c1"
+            android:textSize="16sp"
+            android:text="未选择" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:src="@mipmap/nav_icon_right"
+            />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/ll_horizontal_p"
+        android:layout_height="55dp">
+
+        <TextView
+            style="@style/text_black16"
+            android:text="车牌号码：" />
+        <TextView
+            android:id="@+id/tv_impcar_carprovince"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:background="@drawable/lay_bgblue_radius4"
+            android:drawableRight="@mipmap/icon_rectangle"
+            android:paddingRight="5dp"
+            android:text=""/>
+        <EditText
+            android:id="@+id/et_impcar_carnum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:textColorHint="@color/color_c1"
+            android:textColor="@color/tab_y"
+            android:inputType="textEmailAddress"
+            android:maxLength="16"
+            android:lines="1"
+            android:hint="未获取车牌"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/ll_horizontal_p"
+        android:layout_height="55dp">
+
+        <TextView
+            style="@style/text_black16"
+            android:text="发动机号：" />
+
+        <EditText
+            android:id="@+id/et_impcar_enginenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColorHint="@color/color_c1"
+            android:textColor="@color/tab_y"
+            android:background="@color/white"
+            android:gravity="right"
+            android:maxLines="1"
+            android:hint="后六位"
+            />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/ll_horizontal_p"
+        android:layout_height="55dp">
+
+        <TextView
+            style="@style/text_black16"
+            android:text="车架号：" />
+
+        <EditText
+            android:id="@+id/et_impcar_vinnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColorHint="@color/color_c1"
+            android:textColor="@color/tab_y"
+            android:background="@color/white"
+            android:gravity="right"
+            android:maxLines="1"
+            android:hint="后六位"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_impcar_time"
+        style="@style/ll_horizontal_p"
+        android:layout_height="55dp">
+
+        <TextView
+            style="@style/text_black16"
+            android:layout_weight="1"
+            android:text="购买日期：" />
+
+        <TextView
+            android:id="@+id/tv_impcar_time"
+            style="@style/text_c1"
+            android:textSize="16sp"
+            android:text="未选择" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:src="@mipmap/nav_icon_right"
+            />
+    </LinearLayout>
+</LinearLayout>

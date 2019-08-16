@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        layout="@layout/toolbar_bases"
+        />
+    <TextView
+        style="@style/text_black16"
+        android:layout_width="200dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="请打开车机会员中心扫码车机二维码可绑定车辆"/>
+
+    <Button
+        android:id="@+id/btn_bs_scan"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:text="点击扫码"/>
+</LinearLayout>

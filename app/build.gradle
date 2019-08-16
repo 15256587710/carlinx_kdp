@@ -1,0 +1,206 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        //com.AndroidCarLinx.app  com.AndroidCarLinx.app
+        applicationId "com.ecarxclub.app"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 21000
+        versionName "2.1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        //声明一个渠道的维度
+        flavorDimensions 'default'
+
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters  'arm64-v8a', 'armeabi-v7a', 'x86_64','armeabi' ,'x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64' , 'armeabi-v7a' 'armeabi',
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "60d37b0ebe47bf5bcc07929c", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+    allprojects {
+        repositories {
+            jcenter()
+            mavenCentral()
+            maven { url 'https://jitpack.io' }
+            maven { url 'https://dl.bintray.com/umsdk/release' }
+        }
+    }
+    buildscript {
+        repositories {
+            jcenter()
+            maven { url 'https://dl.bintray.com/umsdk/release' }
+        }
+    }
+
+    signingConfigs {
+        replace {
+            storeFile file('kadoupai.jks')//yxb_carlinx.jks
+            storePassword 'kdp123456'//yxb123456
+            keyAlias 'kdp'
+            keyPassword 'kdp123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false //fasle表示不混淆  true混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true//true开启  false 关闭
+            signingConfig signingConfigs.replace
+        }
+        debug {
+            signingConfig signingConfigs.replace
+        }
+        sourceSets.main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+
+/*配置渠道*/
+    productFlavors {
+        _360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "_360"]
+        }
+        Baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Baidu"]
+        }
+        VIVO {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "VIVO"]
+        }
+        OPPO {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "OPPO"]
+        }
+        Yingyongbao {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Yingyongbao"]
+        }
+        Xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Xiaomi"]
+        }
+        Huawei {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Huawei"]
+        }
+        Meizu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Meizu"]
+        }
+        Samsung {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Samsung"]
+        }
+        Wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Wandoujia"]
+        }
+        Defaults {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Defaults"]
+        }
+        InviteUser {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "InviteUser"]
+        }
+        QUBEScan {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "QUBEScan"]
+        }
+    }
+
+    //配置自定义打包名称
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def fileName
+            def date = new Date()
+            def formattedDate = date.format('yyyyMMdd')
+            if (variant.buildType.name.equals('release')) {//"${variant.versionName}_${variant.productFlavors[0].name}_release.apk"
+                fileName = "_${variant.productFlavors[0].name}_${variant.mergedFlavor.versionName}_release_${formattedDate}.apk"
+            } else if (variant.buildType.name.equals('debug')) {
+                fileName = "${variant.mergedFlavor.versionName}_debug_${formattedDate}.apk"
+            }
+            outputFileName = fileName;
+        }
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    // 添加下面这句即可
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    // OKGO
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    // RxBinding
+    implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    // 类IOS加载框
+    implementation 'com.github.gittjy:LoadingDialog:1.0.2'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    // 图片选择器
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    // EasyRecyclerView
+    //    implementation 'com.jude:easyrecyclerview:4.4.0'
+    //    implementation 'com.bigkoo:ConvenientBanner:2.1.4'
+    // XTabLayout
+    implementation 'com.androidkun:XTabLayout:1.1.3'
+    implementation project(':easyrecyclerview')
+    implementation project(':library')
+    // 添加下面的内容
+    implementation(name: 'alipaySdk-15.6.2-20190416165100-noUtdid', ext: 'aar')
+    //    configurations {
+    //        all*.exclude group: 'com.jude.easyrecyclerview',module: 'recyclerview-v7'
+    //        //或者粗暴点，就没有上面的坑了  all*.exclude module: 'support-v4'
+    //    }
+    //    支付宝支付
+    implementation files('libs/AMap2DMap_5.2.0_AMapSearch_6.5.0_AMapLocation_4.6.0_20190423.jar')
+    //微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation files('libs/UPPayAssistEx.jar')
+    implementation files('libs/UPPayPluginExPro.jar')
+    //友盟
+    implementation 'com.umeng.umsdk:analytics:7.5.4'
+    implementation 'com.umeng.umsdk:common:1.5.4'
+    //推送
+    implementation 'cn.jiguang.sdk:jpush:3.3.1'
+    // 此处以JPush 3.3.1 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.0.1'
+    // 此处以JCore 2.0.1 版本为例。
+    implementation files('libs/umeng-share-core-6.9.4.jar')
+    implementation files('libs/umeng-sharetool-6.9.4.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.4.jar')
+    implementation files('libs/umeng-share-sina-simplify-6.9.4.jar')
+    implementation files('libs/umeng-share-QQ-simplify-6.9.4.jar')
+
+    // AgentWeb
+    implementation 'com.just.agentweb:agentweb:3.1.0'
+
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5'
+
+    //仿ios  侧滑返回
+    implementation 'me.imid.swipebacklayout.lib:library:1.1.0'
+    // 二维码扫描
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.2.1'
+}

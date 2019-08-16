@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+    <include
+        layout="@layout/toolbar_bases"
+        />
+    <LinearLayout
+        style="@style/ll_horizontal_p"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            style="@style/text_black"
+            android:textSize="15sp"
+            android:text="姓名："/>
+
+        <EditText
+            android:id="@+id/et_mine_add_name"
+            android:textColor="@color/tab_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入收货人姓名"
+            android:inputType="text"
+            android:textColorHint="@color/color_c1"
+            android:background="@color/white"
+            android:maxLength="10"
+            android:gravity="right"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/ll_horizontal_p"
+        android:layout_height="48dp"
+        >
+        <TextView
+            style="@style/text_black"
+            android:textSize="15sp"
+            android:text="手机号码："/>
+
+        <EditText
+            android:id="@+id/et_mine_add_phonenum"
+            android:textColor="@color/tab_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColorHint="@color/color_c1"
+            android:background="@color/white"
+            android:gravity="right"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_mine_address"
+        style="@style/ll_horizontal_p"
+        android:layout_height="48dp"
+        >
+        <TextView
+            style="@style/text_black"
+            android:textSize="15sp"
+            android:text="所在城市："/>
+        <TextView
+            android:id="@+id/tv_mine_address_city"
+            style="@style/text_black"
+            android:textSize="15sp"
+            android:text=""
+            android:gravity="right"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/nav_icon_right"
+            android:layout_marginLeft="6dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ll_horizontal_p"
+        android:layout_height="73dp"
+        >
+        <TextView
+            style="@style/text_black"
+            android:textSize="15sp"
+            android:text="详细地址："/>
+
+        <EditText
+            android:id="@+id/et_mine_add_address"
+            android:textColor="@color/tab_n"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="如道路、小区、单元室等"
+            android:paddingLeft="10dp"
+            android:inputType="text"
+            android:maxLength="50"
+            android:textColorHint="@color/color_c1"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_mine_add_sure"
+        style="@style/btn_bgyellow_rd4"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="确认添加"/>
+
+</LinearLayout>

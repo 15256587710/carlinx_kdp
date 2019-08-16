@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="卡券中心"
+        android:textColor="@color/tab_y"
+        android:textSize="18sp" />
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/xRefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.andview.refreshview.XScrollView
+            android:id="@+id/xscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <com.ecarxclub.app.utils.banner.view.ConvenientBanner
+                        android:id="@+id/cb_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:canLoop="true">
+
+                    </com.ecarxclub.app.utils.banner.view.ConvenientBanner>
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/gv_card_conpon"
+                    android:layout_width="match_parent"
+                    android:layout_height="82dp"
+                    android:numColumns="4"></GridView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/color_bg" />
+
+                <LinearLayout
+                    style="@style/ll_horizontal_p"
+                    android:layout_height="52dp"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="64dp"
+                        android:layout_height="18dp">
+
+                        <TextView
+                            style="@style/text_black16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="热门卡券" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="6dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/colorYellow50" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_card_more"
+                        style="@style/text_gry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:text="更多 >" />
+                </LinearLayout>
+
+                <com.ecarxclub.app.views.RecyclerForScrollView
+                    android:id="@+id/rv_card_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.ecarxclub.app.views.RecyclerForScrollView>
+            </LinearLayout>
+        </com.andview.refreshview.XScrollView>
+    </com.andview.refreshview.XRefreshView>
+
+
+    <!--<com.jude.easyrecyclerview.EasyRecyclerView-->
+    <!--android:id="@+id/easyrv_list"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:layout_error="@layout/content_erv_error"-->
+    <!--app:layout_empty="@layout/content_erv_empty">-->
+
+    <!--</com.jude.easyrecyclerview.EasyRecyclerView>-->
+
+
+</LinearLayout>
